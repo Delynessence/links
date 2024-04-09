@@ -6,21 +6,10 @@
 }
 
 body {
-    background: linear-gradient(30deg, #CF4670, #fbe8c7, #A5244B, #f8c5d4, #feddce);
-	background-size: 450% 450%;
-	animation: gradient 10s ease infinite;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    background-image: url('https://images.unsplash.com/photo-1516981089577-2c00fa9807ac?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Ganti dengan path menuju file sumber Anda */
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center; 
 }
 
 .theme-light {
