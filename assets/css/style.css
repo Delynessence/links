@@ -6,15 +6,15 @@
 }
 
 body {
-    background-image: url('https://images.unsplash.com/photo-1516981089577-2c00fa9807ac?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Ganti dengan path menuju file sumber Anda */
+    background-image: url('../Picture/back.jpg'); /* Ganti dengan path menuju file sumber Anda */
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center; 
 }
 
 .theme-light {
-    --color-main: #fff;
-    --color-text: #fff;
+    --color-main: #5e5a5a;
+    --color-text: #000;
 }
 
 #Photo {
@@ -29,6 +29,7 @@ body {
     color: #fff;
     font-size: 22px;
     font-weight: 700;
+    text-decoration: underline;
     display: block;
     font-family: 'Product Sans';
     width: 100%;
@@ -65,7 +66,7 @@ body {
 
 .links {
     display: block;
-    background-color: rgba(255, 255, 255, 0.0 );
+    background-color: #fff;
     color: var(--color-text);
     font-family: var(--font);
     text-align: center;
@@ -79,9 +80,9 @@ body {
 }
 
 .links:hover {
-    background-color: #fff;
-    color: #000; /* <- Added semicolon here */
-    border: solid var(--color-main) 2px;
+    background-color: #5e5a5a;
+    color: #ffffff; /* <- Added semicolon here */
+    border: solid #fff 2px;
 }
 
 .gears {
@@ -122,7 +123,7 @@ body {
 }
 
 #footertext {
-    color: var(--color-main);
+    color: #fff;
     font-size: 12px;
     font-weight: bold;
     line-height: 1.25;
