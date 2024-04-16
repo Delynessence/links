@@ -12,6 +12,10 @@ function toggleTheme() {
    }
 }
 
+function goToIndex() {
+    window.location.href = 'index.html';
+  }
+
 
 function changeImage() {
 
@@ -33,4 +37,13 @@ function changeImage() {
    } else {
        setTheme('theme-light');
    }
+
+
+//form
+
+    function showForm() {
+        document.getElementById('google-form').style.display = 'block';
+    }
+    
+    
 })();
