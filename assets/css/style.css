@@ -10,7 +10,12 @@ body {
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center; 
+    background-attachment: fixed;
 }
+
+iframe {
+    width: 100%;
+  }
 
 .theme-light {
     --color-main: #5e5a5a;
@@ -18,11 +23,26 @@ body {
 }
 
 #Photo {
-    width: 100px;
-    height: 100px;
+    width: 105px;
+    height: 105px;
     display: block;
     margin: 8px auto 13px;
     border-radius: 25%;
+    border: 3px solid;
+    border-color: #fff;
+    box-shadow: 8px 5px 5px rgb(58, 55, 55);
+}
+
+#Photo-2 {
+    width: 105px;
+    height: 105px;
+    display: block;
+    margin: 8px auto 13px;
+    border-radius: 25%;
+    border: 3px solid;
+    border-color: #fff;
+    box-shadow: 8px 5px 5px rgb(58, 55, 55);
+    cursor: pointer;
 }
 
 #Name {
@@ -56,6 +76,7 @@ body {
     text-align: center;
     text-decoration: none;
 }
+
 
 #linksbutton {
     max-width: 580px;
