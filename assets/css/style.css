@@ -6,47 +6,77 @@
 }
 
 body {
-    background-image: url('../Picture/back.jpg'); /* Ganti dengan path menuju file sumber Anda */
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center center; 
-    background-attachment: fixed;
+    background-image: url('../Picture/Back\ STS.jpg');
+    background-size:cover; 
+    background-attachment:fixed ;
 }
 
 iframe {
     width: 100%;
-  }
+    min-height: 50%;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+}
+
+
 
 .theme-light {
-    --color-main: #5e5a5a;
-    --color-text: #000;
+    --color-main: #5F92C7; /* Warna utama yang harmonis dengan latar belakang */
+    --color-text: #333333; /* Warna teks yang gelap namun lembut */
+    --color-link: #8fd3f3; /* Warna button/link yang lembut */
+    --color-link-hover: #A8D1F4; /* Warna button/link saat di-hover */
 }
 
-#Photo {
+@keyframes fadeInOutShadow {
+    0% {
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 45px rgba(0, 0, 0, 0.6);
+    }
+    100% {
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    }
+}
+
+#Photo, #Photo-2 {
     width: 105px;
     height: 105px;
     display: block;
     margin: 8px auto 13px;
     border-radius: 25%;
-    border: 3px solid;
-    border-color: #fff;
-    box-shadow: 8px 5px 5px rgb(58, 55, 55);
-}
-
-#Photo-2 {
-    width: 105px;
-    height: 105px;
-    display: block;
-    margin: 8px auto 13px;
-    border-radius: 25%;
-    border: 3px solid;
-    border-color: #fff;
-    box-shadow: 8px 5px 5px rgb(58, 55, 55);
+    border: 3px solid #ffffff;
     cursor: pointer;
+    animation: fadeInOutShadow 2s infinite;
 }
+
+
+#Photo, #Photo-2 {
+    width: 105px;
+    height: 105px;
+    display: block;
+    margin: 8px auto 13px;
+    border-radius: 25%;
+    border: 3px solid #ffffff;
+    cursor: pointer;
+    animation: fadeInOutShadow 2s infinite;
+}
+
 
 #Name {
-    color: #fff;
+    color: var(--color-text);
     font-size: 22px;
     font-weight: 700;
     text-decoration: underline;
@@ -54,9 +84,10 @@ iframe {
     font-family: 'Product Sans';
     width: 100%;
     text-align: center;
+    margin-bottom: 5px;
 }
 #Description {
-    color: #fff;
+    color: var(--color-text);
     font-size: 17px;
     font-weight: 700;
     display: block;
@@ -67,7 +98,7 @@ iframe {
 }
 
 #title {
-    color: #fff;
+    color: var(--color-text);
     font-size: 17px;
     font-weight: 600;
     line-height: 1.25;
@@ -75,12 +106,13 @@ iframe {
     font-family: var(--font);
     width: 100%;
     text-align: center;
-    text-decoration: none;
+    margin-bottom: 20px;
 }
 
 
 #linksbutton {
-    max-width: 580px;
+    display: fixed;
+    max-width: 500px;
     width: auto;
     display: block;
     margin: 27px auto;
@@ -88,24 +120,58 @@ iframe {
 
 .links {
     display: block;
-    background-color: #fff;
+    background-color: var(--color-link);
     color: var(--color-text);
     font-family: var(--font);
-    text-align: center;
+    text-align: center; /* Aligns the text to the left */
     margin-bottom: 10px;
     padding: 10px;
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
-    transition: all .25s cubic-bezier(.08, .59, .29, .99);
+    transition: color 0.25s cubic-bezier(.08, .59, .29, .99), background-color 0.5s, border-color 0.5s;
     border: solid var(--color-main) 2px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.links img {
+    position: absolute;
+    top: 10px;  /* Adjusts the vertical position */
+    left: 10px; /* Adjusts the horizontal position */
+    width: 20px;
+    height: 20px;
+    
+    transition: filter 0.5s;
+}
+
+.links:hover img {
+    filter: grayscale(0);
 }
 
 .links:hover {
-    background-color: #5e5a5a;
-    color: #ffffff; /* <- Added semicolon here */
-    border: solid #fff 2px;
+    color: black;
+    border: solid #fff;
 }
+
+.links:after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: transform 0.5s;
+}
+
+.links:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+}
+
 
 .gears {
     width: auto;
@@ -115,7 +181,7 @@ iframe {
 
 .gear {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.0 );
+    background-color: var(--color-link);
     color: var(--color-text);
     font-family: var(--font);
     text-align: center;
@@ -145,7 +211,7 @@ iframe {
 }
 
 #footertext {
-    color: #fff;
+    color: var(--color-text);
     font-size: 12px;
     font-weight: bold;
     line-height: 1.25;
@@ -155,4 +221,77 @@ iframe {
     margin-top: 20px;
     text-align: center;
     text-decoration: none;
+    animation: fadeInOut 3s infinite;
 }
+
+@keyframes fadeInOut {
+    0%, 100% { 
+        opacity: 0; 
+    }
+    50% { 
+        opacity: 1; 
+    }
+}
+
+/*Modal System*/
+
+#warningModal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+        }
+.modalContent img {
+    width: 10px;
+    height: 10px;
+
+}
+#modalContent {
+            background-color: rgba(0, 0, 0, 0.5);
+            margin: 15% auto;
+            padding: 20px;
+            color: #ffffff;
+            width: 50%;
+            max-width: 250px;
+            text-align: center;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+        #closeModal {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+}
+
+        #closeModal:hover {
+            background-color: rgb(167, 28, 28);
+            transition: 0.3s;
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+            -ms-transition: 0.3s;
+            -o-transition: 0.3s;
+}
+
+        #warningIcon {
+            font-size: 40px;
+            color: #ffcc00; /* Warning color */
+            margin-bottom: 10px;
+        }
