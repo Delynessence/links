@@ -80,3 +80,44 @@ sr.reveal('#Photo, #Photo-2, #Name, #Description, iframe',{});
 sr.reveal('#title, #linksbutton, #footertext',{delay: 400}); 
 
 })();
+
+// DISABLE RIGHT CLICK
+
+// Disable right-click context menu and show modal
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    document.getElementById('warningModal').style.display = 'block';
+});
+
+// Close modal on button click
+document.getElementById('closeModal').addEventListener('click', function() {
+    document.getElementById('warningModal').style.display = 'none';
+});
+
+// Close modal on Escape key press
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.getElementById('warningModal').style.display = 'none';
+    }
+});
+
+// Disable F12, Ctrl + Shift + I, Ctrl + U and show modal
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'F12' || 
+        (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+        (e.ctrlKey && e.key === 'U')) {
+        e.preventDefault();
+        document.getElementById('warningModal').style.display = 'block';
+    }
+});
+
+// Close modal when clicking outside of it
+window.addEventListener('click', function(e) {
+    const modal = document.getElementById('warningModal');
+    if (modal.style.display === 'block' && !modal.contains(e.target)) {
+        modal.style.display = 'none';
+    }
+});
+
+
+
