@@ -142,17 +142,12 @@ iframe {
     left: 10px; /* Adjusts the horizontal position */
     width: 20px;
     height: 20px;
-    
     transition: filter 0.5s;
-}
-
-.links:hover img {
-    filter: grayscale(0);
 }
 
 .links:hover {
     color: black;
-    border: solid #fff;
+    border: solid #fff 2px;
 }
 
 .links:after {
@@ -170,34 +165,6 @@ iframe {
 
 .links:hover:after {
     transform: skewX(-45deg) scale(1, 1);
-}
-
-
-.gears {
-    width: auto;
-    text-align: center;
-    margin: 10px auto;
-}
-
-.gear {
-    display: inline-block;
-    background-color: var(--color-link);
-    color: var(--color-text);
-    font-family: var(--font);
-    text-align: center;
-    margin-bottom: 10px;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: bold;
-    transition: all .25s cubic-bezier(.08, .59, .29, .99);
-    border: solid var(--color-main) 2px;
-}
-
-.gear:hover {
-    background-color: #fff;
-    color: #000;
-    border: solid var(--color-main) 2px;
 }
 
 .footervalue {
