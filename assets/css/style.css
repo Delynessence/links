@@ -14,6 +14,7 @@ body,html{
 iframe {
     width: 100%;
     min-height: 50%;
+    z-index: 1000000;
 }
 
 .wrapper {
@@ -28,6 +29,7 @@ iframe {
     height: 100%;
     background: transparent;
     z-index: 1;
+    pointer-events: none;
 }
 
 
