@@ -6,7 +6,7 @@
 }
 
 body,html{
-    background-image: url('../Picture/SSK_Back.jpg');
+    background-image: url('../Picture/back.jpg');
     background-size:cover; 
     background-attachment:fixed ;
 }
@@ -35,9 +35,9 @@ iframe {
 
 
 .theme-light {
-    --color-main: #2d1b0f; /* Warna utama yang harmonis dengan latar belakang */
-    --color-text: #ffffff; /* Warna teks yang gelap namun lembut */
-    --color-link: #e5d05f; /* Warna button/link yang lembut */
+    --color-main: #d6b9d0; /* Warna pastel lembut (lavender) */
+    --color-text: #ffffff; /* Teks gelap */
+    --color-link: #f78ca0; /* Plum untuk link dan button */
 }
 
 @keyframes fadeInOutShadow {
@@ -58,7 +58,7 @@ iframe {
     display: block;
     margin: 8px auto 13px;
     border-radius: 25%;
-    border: 3px solid #e5d05f   ;
+    border: 3px solid #ffffff   ;
     cursor: pointer;
     animation: fadeInOutShadow 2s infinite;
 }
@@ -109,7 +109,7 @@ iframe {
 .links {
     display: block;
     background-color: var(--color-link);
-    color: var(--color-text);
+    color: white;
     font-family: var(--font);
     text-align: center;
     /*Alignsthetexttotheleft*/margin-bottom: 10px;
@@ -136,8 +136,8 @@ iframe {
 
 
 .links:hover {
-    color: black;
-    border: solid #2d1b0f 2px;
+    color: #333333;
+    border: solid #f78ca0 2px;
 }
 
 .links:after {  
