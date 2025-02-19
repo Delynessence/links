@@ -177,16 +177,16 @@ body,html{
 }
 
 #footertext {
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
     color: var(--color-text);
     font-size: 12px;
     font-weight: bold;
-    line-height: 1.25;
     display: block;
     font-family: var(--font);
     width: 100%;
-    margin-top: 20px;
     text-align: center;
-    text-decoration: none;
     animation: fadeInOut 3s infinite;
 }
 
