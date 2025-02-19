@@ -166,23 +166,13 @@ body,html{
     transform: skewX(-45deg) scale(1, 1);
 }
 
-.footervalue {
-    text-align: center;
-    font-size: 1.3rem;
-    margin-top: 10px;
-}
-
-.footervalue a {
-    text-decoration:none;
-}
 
 #footertext {
-    position: fixed;
-    bottom: 0;
-    padding: 10px;
+    position: relative;
+    padding-bottom: 10px;
     color: var(--color-text);
-    font-size: 12px;
     font-weight: bold;
+    font-size: 0.8rem;
     display: block;
     font-family: var(--font);
     width: 100%;
