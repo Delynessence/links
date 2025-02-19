@@ -7,28 +7,40 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="icon" href="assets/Picture/PP.jpg" type="image/x-icon" />
-    <script type="text/javascript" src="assets/js/script.js"></script>
     <meta name="description" content="Official LinkTree Delynessence" />
+    <!-- Move script.js inclusion to the bottom -->
 </head>
-<body>  
-    <!--Header-->
-    <img id="Photo-2" src="assets/Picture/PP.jpg" onclick="goToIndex()">
-    <span id="Name">
-        Delynessence || #EssenceOfDelight
-    </span>
-    <span id="Description">  
-        FANBASE OF ADELINE WIJAYA 12TH GENERATION
-    </span>
+<body> 
+    <div id="warningModal">
+        <div id="modalContent">
+            <div id="warningIcon">⚠️</div>
+            <p>Right-click is disabled on this page.</p>
+            <button id="closeModal">Close</button>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <img id="Photo-2" src="assets/Picture/logo.png" onclick="goToIndex()">
+    <span id="Name">𝐃𝐄𝐋𝐘𝐍𝐄𝐒𝐒𝐄𝐍𝐂𝐄</span>
+    <span id="Description">FANBASE OF ADELINE WIJAYA 12<sup>th</sup> GENERATION</span>
 
-    <!--Embed Google Form-->   
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezmJjawSBggSIBJlDZE-IfPmBFe-JTq9HHh4C6YNAl4Wz_aA/viewform?embedded=true" width="640" height="2200" frameborder="0">Loading…</iframe>
+    <!-- Embed Google Form -->  
+     
+    <!--height="1800" // Opens-->
+    <!--height="640" // Closed-->
+    <div class="wrapper">
+    <div class="overlay"></div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSftJ-AyktiBub3gW4CM4yW1C_O6vuhu02T7EzIuNuG0VIOceQ/viewform?embedded=true" width="640" height="360" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
 
-    <!--Footer Teks-->
-    <span id="footertext"> Made with ❤️ By Delynessence </span>;
-    <!--===== SCROLL REVEAL =====-->
+
+    <!-- Footer Text -->
+    <span id="footertext"> Made with ❤️ By Delynessence </span>
+
+    <!-- SCROLL REVEAL -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!--===== MAIN JS =====-->
+    <!-- MAIN JS -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>

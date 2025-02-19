@@ -6,38 +6,41 @@
 }
 
 body,html{
-    background-image: url('../Picture/back.jpg');
+    background-image: url('../Picture/Destop.jpg');
     background-size:cover; 
-    background-attachment:fixed ;
+    background-attachment: fixed; 
+    background-position: center;
 }
 
-iframe {
-    width: 100%;
-    min-height: 50%;
-    z-index: 1000000;
+@media (max-width: 1024px) { /* Tablet */
+    body,html {
+        background: url('../Picture/Tablet.jpg');
+        background-size:cover; 
+        background-attachment: fixed; 
+        background-position: center;
+    }
 }
 
-.wrapper {
-    position: relative;
+@media (max-width: 768px) { /* Mobile */
+    body,html {
+        background: url('../Picture/Mobile.jpg');
+        background-size:cover; 
+        background-attachment: fixed; 
+        background-position: center;
+    }
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    z-index: 1;
-    pointer-events: none;
+    display: flex;
+    justify-content: center; /* Pusat horizontal */
+    align-items: center; /* Pusat vertikal */
+    z-index: 10;
 }
 
-
-
 .theme-light {
-    --color-main: #ebdddd; /* Warna pastel lembut (lavender) */
-    --color-text: #ffffff; /* Teks gelap */
-    --color-link: #f78ca0; /* Plum untuk link dan button */
+    --color-main: #6ED5B6; /* Warna pastel lembut (lavender) */
+    --color-text: #143D37; /* Teks gelap */
+    --color-link: #4AA294; /* Plum untuk link dan button */
 }
 
 @keyframes fadeInOutShadow {
@@ -52,6 +55,12 @@ iframe {
     }
 }
 
+@keyframes float {
+    0%, 100% { transform: translateY(8px); }
+    50% { transform: translateY(0); }
+}
+
+
 #Photo, #Photo-2 {
     width: 105px;
     height: 105px;
@@ -60,7 +69,7 @@ iframe {
     border-radius: 25%;
     border: 3px solid #ffffff   ;
     cursor: pointer;
-    animation: fadeInOutShadow 2s infinite;
+    animation: fadeInOutShadow 2s infinite,float 3s ease-in-out infinite ;
 }
 
 #Name {
@@ -137,12 +146,12 @@ iframe {
 
 .links:hover {
     color: #333333;
-    border: solid #f78ca0 2px;
+    border: solid #143D37 2px;
 }
 
 .links:after {  
     content: "";
-    background: white;
+    background: #dbecd7;
     position: absolute;
     z-index: -1;
     left: -20%;
@@ -206,7 +215,6 @@ iframe {
 .modalContent img {
     width: 10px;
     height: 10px;
-
 }
 #modalContent {
             background-color: rgba(0, 0, 0, 0.5);
