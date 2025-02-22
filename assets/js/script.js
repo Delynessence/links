@@ -95,3 +95,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+// GFROM Auto Scroll
+const iframe = document.getElementById('gform');
+
+        iframe.onload = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
