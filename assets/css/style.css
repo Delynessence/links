@@ -6,28 +6,10 @@
 }
 
 body,html{
-    background-image: url('../Picture/Delyn.png');
+    background-image: url('../Picture/Back.png');
     background-size:cover; 
     background-attachment: fixed; 
     background-position: center;
-}
-
-@media (max-width: 1024px) { /* Tablet */
-    body,html {
-        background: url('../Picture/Delyn.png');
-        background-size:cover; 
-        background-attachment: fixed; 
-        background-position: center;
-    }
-}
-
-@media (max-width: 768px) { /* Mobile */
-    body,html {
-        background: url('../Picture/Delyn.png');
-        background-size:cover; 
-        background-attachment: fixed; 
-        background-position: center;
-    }
 }
 
 .overlay {
@@ -38,9 +20,9 @@ body,html{
 }
 
 .theme-light {
-    --color-main: #ffffff; /* Warna pastel lembut (lavender) */
-    --color-text: #ffffff; /* Teks gelap */
-    --color-link: #000000; /* Plum untuk link dan button */
+    --color-main: #f0f4fa; /* Warna pastel lembut (lavender) */
+    --color-text: #1c477c; /* Teks gelap */
+    --color-link: #5d6979; /* Plum untuk link dan button */
 }
 
 @keyframes fadeInOutShadow {
